@@ -1,6 +1,16 @@
 # inlets-heroku-tutorial
 
-Run an [inlets](https://inlets.dev/) server on Heroku
+Run an [inlets](https://inlets.dev/) server on Heroku.
+
+![Conceptual diagram](https://github.com/inlets/inlets/raw/master/docs/inlets.png)
+
+inlets is a service tunnel and reverse proxy. It can be used to punch out local endpoints to another network, or the Internet.
+
+See [inlets/inlets](https://inlets.dev/) on GitHub.
+
+# Deployment
+
+In order to run inlets on Heroku, you can use the container image facility and then set an auth token using Heroku's environment variable store. There is no need to rebuild the whole container from scratch, just inherit the official image and override the `CMD`.
 
 ## Push a container image
 

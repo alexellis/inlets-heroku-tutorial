@@ -25,7 +25,7 @@ heroku restart web -a my-inlets
 * Set auth token
 
 ```sh
-export TOKEN=$(head -c 16 /dev/urandom | shasum | cut -f1 -d"-")
+export TOKEN=$(head -c 16 /dev/urandom | shasum | cut -f1 -d" ")
 echo "Token is: ${TOKEN}"
 
 export HEROKU_APP=my-inlets
